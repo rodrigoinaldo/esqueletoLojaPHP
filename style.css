@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font: 16px Arial, Tahoma;
+}
+
+header{
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block
+}
+header img{
+    width:100px;
+    height:80px;
+}
+a {
+    text-decoration: none;
+}
+header nav {
+    float: right;
+    
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    margin: 15px;
+    display: inline-block;
+   
+}
+header nav ul li a {
+    color: yellow;
+    text-decoration: none;
+}
+footer{
+    background-color: black;
+    padding: 20px 0;
+    text-align: center;
+    & h2{
+        color: yellow;
+    }
+    & p{
+        color: yellow;
+    }
+}
+main h1 {
+    text-align:  center;
+}
+p{
+    text-align: center;
+
+}
+main div {
+    padding-left: 75px;
+    padding-right: 75px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+}
+.coluna{
+    padding: 60px;
+}
+
+.espaco{
+    margin: 75px;
+  
+}
+ .contato{
+    display: block;
+    border: 2px solid black;
+    border-radius: 75px;
+    margin: 10px;
+}
+.contato a {
+    text-decoration: none;
+    color: gray;
+}
