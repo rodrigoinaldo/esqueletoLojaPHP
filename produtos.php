@@ -3,7 +3,7 @@
     include "dados.php";
 ?>
 <main>
-    <h1>produtos:</h1>    
+    <h1>Pneus:</h1>    
     <br>
     
     <div class="container text-center">
@@ -14,6 +14,7 @@
         shuffle($produtos);
 
         foreach($produtos as $produto){
+            if($produto["tipoProduto"] == "pneu"){
         ?>
             <div class="col">
 
@@ -29,6 +30,7 @@
             </div>
 
         <?php
+        };
         }
         ?>
         </div>

@@ -64,17 +64,16 @@ main div {
     padding: 60px;
 }
 
-.espaco{
-    margin: 75px;
-  
-}
- .contato{
+.contato{
     display: block;
     border: 2px solid black;
-    border-radius: 75px;
-    margin: 10px;
+    border-radius: 25px;
+    margin: 75px;
+    padding-left: 100px;
+    
 }
 .contato a {
     text-decoration: none;
     color: gray;
 }
+
