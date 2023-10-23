@@ -11,7 +11,6 @@
         <div class="row">
 
         <?php
-        shuffle($produtos);
 
         foreach($produtos as $produto){
             if($produto["tipoProduto"] == "pneu"){

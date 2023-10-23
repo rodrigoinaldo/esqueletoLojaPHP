@@ -77,3 +77,12 @@ main div {
     color: gray;
 }
 
+/*min-width and max-width*/
+
+@media (max-width: 576px){
+    header nav ul li{
+        margin: 2px;
+        display: block;
+    }
+
+}

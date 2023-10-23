@@ -1,5 +1,25 @@
 <?php
 
+    $servidor ="localhost";
+    $usuario = "root";
+    $senha ="";
+    $banco= "atlantapneus"; 
+
+    $mysql = new mysqli($servidor, $usuario, $senha, $banco); //o que vai realmente se conectar ao banco
+
+    if($mysql->connect_error){
+        die("erro na conexao" . $SQL->connect_error);
+    }
+        $query = "SELECT * FROM produtos";
+        $resultado[]= $mysql->query($query);
+
+        foreach($resultado as $produtos){
+            return true;
+        }
+    $SQL->close();
+   
+    
+    /* 
     $produtos[1] = array ("id" => 1,
     "nome" => "175/65 R 14", 
     "valor" =>"235.00",
@@ -66,6 +86,6 @@
     "imagem" => "pivo.jpg",
     "tipoProduto" => "oferta"
     );
-
+    */
   
 ?>

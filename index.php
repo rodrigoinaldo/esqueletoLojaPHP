@@ -12,8 +12,8 @@
         <div class="row">
 
         <?php
+        
         $i = 0 ;
-        shuffle($produtos);
 
         foreach($produtos as $produto){
             if($produto["tipoProduto"] == "oferta"){
