@@ -11,13 +11,7 @@
         die("erro na conexao" . $SQL->connect_error);
     }
         $query = "SELECT * FROM produtos";
-        $resultado[]= $mysql->query($query);
-
-        foreach($resultado as $produtos){
-            return true;
-        }
-    $SQL->close();
-   
+        $produtos= $mysql->query($query);
     
     /* 
     $produtos[1] = array ("id" => 1,

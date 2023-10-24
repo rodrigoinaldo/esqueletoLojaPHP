@@ -3,17 +3,23 @@
     include "dados.php";
 
     $i = $_GET["id"];
+
+    $query = "SELECT * FROM  produtos WHERE id = '$i'";
+    $produto= $mysql->query($query);
+    $produto = $produto->fetch_assoc();
+                        
+
 ?>
 
 <main>
     <div class="grid">
         <div class="coluna">
-            <img src="imagem/<?=$produtos[$i]["imagem"]?>" alt="<?=$produtos[$i]["nome"]?>">
+            <img src="imagem/<?=$produto["imagem"]?>" alt="<?=$produto["nome"]?>">
         </div>
 
         <div class="coluna">
-            <strong><?=$produtos[$i]["nome"]?></strong> <br>
-                    <?=$produtos[$i]["valor"]?><br>
+            <strong><?=$produto["nome"]?></strong> <br>
+                    <?=$produto["valor"]?><br>
 
             <button type="button" class="btn btn-warning">Comprar</button>
         </div>
