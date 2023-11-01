@@ -2,13 +2,17 @@
     include "header.php";
     include "dados.php";
 
-    $i = $_GET["id"];
+    $id = $_GET["id"];
 
-    $query = "SELECT * FROM  produtos WHERE id = '$i'";
-    $produto= $mysql->query($query);
-    $produto = $produto->fetch_assoc();
-                        
-
+    if(!empty($id)){
+        $sql = "select * from  produtos WHERE id = '$id'";
+        $consulta= $pdo->query($sql);
+        $consulta -> execute();
+    
+        $produto = $consulta->fetch(PDO::FETCH_ASSOC);
+        
+        
+    }
 ?>
 
 <main>

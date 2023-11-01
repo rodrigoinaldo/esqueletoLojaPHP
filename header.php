@@ -24,6 +24,7 @@
                     <li><a href="sobre.php" title="Sobre">Sobre</a></li>
                     <li><a href="produtos.php" title="Produtos">Produtos</a></li>
                     <li><a href="contato.php" title="Contato">Contato</a></li>
+                    <button type="button" class="btn btn-warning"><a href="login.php">login</a></button>
                  </ul>
             </nav>
     </header>

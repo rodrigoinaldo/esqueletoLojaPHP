@@ -37,13 +37,15 @@ footer{
     background-color: black;
     padding: 20px 0;
     text-align: center;
-    & h2{
-        color: yellow;
-    }
-    & p{
-        color: yellow;
-    }
+ 
 }
+footer h2{
+    color: yellow;
+}
+footer p{
+    color: yellow;
+}
+
 main h1 {
     text-align:  center;
 }
@@ -85,4 +87,8 @@ main div {
         display: block;
     }
 
+}
+.container .row form{
+    display: grid;
+    padding: 25px;
 }

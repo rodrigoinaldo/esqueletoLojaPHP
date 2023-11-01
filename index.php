@@ -1,6 +1,8 @@
 <?php
     include "header.php";
     include "dados.php";
+
+
 ?>
 <main>
     
@@ -14,6 +16,7 @@
         <?php
         
         $i = 0 ;
+        
 
         foreach($produtos as $produto){
             if($produto["tipoProduto"] == "oferta"){

@@ -5,13 +5,21 @@
     $senha ="";
     $banco= "atlantapneus"; 
 
-    $mysql = new mysqli($servidor, $usuario, $senha, $banco); //o que vai realmente se conectar ao banco
+    try {
+        $pdo = new PDO("mysql:host={$servidor};dbname={$banco};port=3306;charset=utf8;",$usuario,$senha); //o que vai realmente se conectar ao banco
 
-    if($mysql->connect_error){
-        die("erro na conexao" . $SQL->connect_error);
+        $sql = "select * from produtos";
+        $consulta= $pdo->prepare($sql);
+        $consulta->execute();
+    
+        $produtos = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    
+    } catch (\Exception $e) {
+        echo"erro ao se conectar";
+        echo $e->getMessage();
     }
-        $query = "SELECT * FROM produtos";
-        $produtos= $mysql->query($query);
+
+
     
     /* 
     $produtos[1] = array ("id" => 1,
